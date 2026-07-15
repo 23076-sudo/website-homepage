@@ -25,6 +25,6 @@ def jellyfin():
         "EpisodeCount": jf_data["EpisodeCount"],
         "SongCount": jf_data["SongCount"]
     }
-    with open("stats.json", "w") as jf_stat:
+    with open("./homepage/stats.json", "w") as jf_stat:
         json.dump(jf_stats, jf_stat)
 jellyfin()
