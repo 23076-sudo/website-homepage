@@ -22,7 +22,10 @@
 
 <main>
     <article>
-        <h1>i am working on the website and also the backend so expect updates as progress is completed</h1>
+        <h1>Jellyfin Stats</h1>
+        <p>Movies: <span id="movie-count">...</span></p>
+        <p>Shows: <span id="series-count">...</span></p>
+        <p>Songs: <span id="song-count">...</span></p>
     </article>
     <nav>
         <h2>Temp links</h2>
@@ -43,5 +46,14 @@
     <p>(note that this is ai made and will be until i remake it myself)</p>
     <a href="https://privacy.crapcraft.nz">Privacy Policy/TOS</a>
 </footer>
+    <script>
+        fetch('./stats.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("movie-count").textContent = data.MovieCount
+                document.getElementById("series-count").textContent = data.EpisodeCount
+                document.getElementById("song-count").textContent = data.SongCount
+            });
+    </script>
 </body>
 </html>
