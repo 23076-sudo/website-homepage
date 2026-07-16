@@ -1,5 +1,7 @@
 # **a simple webpage with jellyfin stats**
 
+example: [crapcraft.nz](https://crapcraft.nz)
+
 ## requirements
 - **linux as this is made for linux**
 - python 3.14.6
