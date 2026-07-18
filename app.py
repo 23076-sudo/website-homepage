@@ -18,8 +18,15 @@ SEERR_HEADERS = {
     "X-API-Key": SEERR_KEY
 }
 
+#seerr api urls/keys
+PROWLARR_URL = os.getenv("PROWLARR_URL")
+PROWLARR_KEY = os.getenv("PROWLARR_KEY")
+PROWLARR_HEADERS = {
+    "X-API-Key": PROWLARR_KEY
+}
+
 def jellyfin():
-    response = requests.get(JF_URL, headers=JF_HEADERS)
+    response = requests.get(f"{JF_URL}/Items/Counts", headers=JF_HEADERS)
     data = response.json()
     return {
         "MovieCount": data["MovieCount"],
@@ -36,14 +43,23 @@ def seerr():
         "RequestsApproved": data["approved"],
     }
 
+def prowlarr():
+    response = requests.get(f"{PROWLARR_URL}/api/v1/system/status", headers=PROWLARR_HEADERS)
+    data = response.json()
+    return {
+        "ProwlarrVersion": data["version"],
+    }
+
 def results():
     stats = {}
     stats.update(jellyfin())
     stats.update(seerr())
-    
+    stats.update(prowlarr())
+
     with open("./homepage/stats.json", "w") as f:
         json.dump(stats, f)
         print(stats)
 jellyfin()
 seerr()
+prowlarr()
 results()

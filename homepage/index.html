@@ -1,87 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Crapcraft.nz</title>
-    
-    <link rel="icon" type="image/x-icon" href="https://cdn.crapcraft.nz/u/favicon.ico">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header>
-    <a href="https://crapcraft.nz">
-        <img src="https://cdn.crapcraft.nz/raw/5HyVtn.png" alt="logo">
-    </a>
-    <div class="header-front-text">
-        <h1>Crapcraft.nz</h1>
-        <p>A simple homelab with useful services</p>
-    </div>
-</header>
-<ul class="topnav">
-  <li><a href="/privacy">Privacy/TOS</a></li>
-  <li><a href="/contact">Contact</a></li>
-  <li><a href="/about">About</a></li>
-</ul>
-<main>
-    <article>
-        <p>hello random reader welcome to my corner of the internet</p>
-    </article>
-    <nav>
-        <h2>Links</h2>
-        <div class="nav-links">
-            <div class="nav-jf">
-                <a href="https://jellyfin.crapcraft.nz">
-                    <img src="https://cdn.crapcraft.nz/u/jellyfin.png" style="width:42px;height:42px;">
-                </a>
-                <p>Songs: <span id="song-count">...</span></p>
-                <p>Episodes: <span id="series-count">...</span></p>
-                <p>Movies: <span id="movie-count">...</span></p>
+        <title>Crapcraft.nz</title>
+
+        <link rel="icon" type="image/x-icon" href="https://cdn.crapcraft.nz/u/favicon.ico" />
+
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <a href="https://crapcraft.nz">
+                <img src="https://cdn.crapcraft.nz/raw/5HyVtn.png" alt="logo" />
+            </a>
+            <div class="header-front-text">
+                <h1>Crapcraft.nz</h1>
+                <p>A simple homelab with useful services</p>
             </div>
-            <div class="nav-seerr">
-                <a href="https://seerr.crapcraft.nz">
-                    <img src="https://cdn.crapcraft.nz/u/seerr.png" style="width:42px;height:42px;">
-                </a>
-                <p>Requests: <span id="requests-total">...</span></p>
-                <p>Pending: <span id="requests-pending">...</span></p>
-                <p>Approved: <span id="requests-approved">...</span></p>
+        </header>
+        <ul class="topnav">
+            <li><a href="/privacy">Privacy/TOS</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+        <main>
+            <article>
+                <p>hello random reader welcome to my corner of the internet</p>
+            </article>
+            <nav>
+                <h2>Links</h2>
+                <div class="nav-links">
+                    <div class="nav-jf">
+                        <a href="https://jellyfin.crapcraft.nz">
+                            <img src="https://cdn.crapcraft.nz/u/jellyfin.png" style="width: 42px; height: 42px" />
+                        </a>
+                        <p>Songs: <span id="song-count">...</span></p>
+                        <p>Episodes: <span id="series-count">...</span></p>
+                        <p>Movies: <span id="movie-count">...</span></p>
+                    </div>
+                    <div class="nav-seerr">
+                        <a href="https://seerr.crapcraft.nz">
+                            <img src="https://cdn.crapcraft.nz/u/seerr.png" style="width: 42px; height: 42px" />
+                        </a>
+                        <p>Requests: <span id="requests-total">...</span></p>
+                        <p>Pending: <span id="requests-pending">...</span></p>
+                        <p>Approved: <span id="requests-approved">...</span></p>
+                    </div>
+                    <a href="https://ai.crapcraft.nz">
+                        <img src="https://cdn.crapcraft.nz/u/open-webui.png" style="width: 42px; height: 42px" />
+                    </a>
+                    <a href="https://searxng.crapcraft.nz">
+                        <img src="https://cdn.crapcraft.nz/u/searxng.png" style="width: 42px; height: 42px" />
+                    </a>
+                    <a href="https://fmd.crapcraft.nz">
+                        <img src="https://cdn.crapcraft.nz/u/fmd.png" style="width: 42px; height: 42px" />
+                    </a>
+                    <a href="https://uptime.crapcraft.nz">
+                        <img src="https://cdn.crapcraft.nz/u/uptime-kuma.png" style="width: 42px; height: 42px" />
+                    </a>
+                </div>
+                <div class="nav-frame">
+                    <p>
+                        <strong
+                            >Crapcraft Minecraft FM
+                            <img
+                                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXJhZGlvLXRvd2VyLWljb24gbHVjaWRlLXJhZGlvLXRvd2VyIj48cGF0aCBkPSJNNC45IDE2LjFDMSAxMi4yIDEgNS44IDQuOSAxLjkiLz48cGF0aCBkPSJNNy44IDQuN2E2LjE0IDYuMTQgMCAwIDAtLjggNy41Ii8+PGNpcmNsZSBjeD0iMTIiIGN5PSI5IiByPSIyIi8+PHBhdGggZD0iTTE2LjIgNC44YzIgMiAyLjI2IDUuMTEuOCA3LjQ3Ii8+PHBhdGggZD0iTTE5LjEgMS45YTkuOTYgOS45NiAwIDAgMSAwIDE0LjEiLz48cGF0aCBkPSJNOS41IDE4aDUiLz48cGF0aCBkPSJtOCAyMiA0LTExIDQgMTEiLz48L3N2Zz4="
+                        /></strong>
+                    </p>
+                    <iframe
+                        src="https://radio.crapcraft.nz/public/homepage/embed?theme=dark&bg_color=262626&rounded=1&hide_volume=1&hide_streams=1"
+                        frameborder="0"
+                        allowtransparency="true"
+                        style="width: 100%; min-height: 150px; height: 150px; border: 0"
+                    ></iframe>
+                    <p>
+                        <strong
+                            >Crapcraft FM
+                            <img
+                                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXJhZGlvLXRvd2VyLWljb24gbHVjaWRlLXJhZGlvLXRvd2VyIj48cGF0aCBkPSJNNC45IDE2LjFDMSAxMi4yIDEgNS44IDQuOSAxLjkiLz48cGF0aCBkPSJNNy44IDQuN2E2LjE0IDYuMTQgMCAwIDAtLjggNy41Ii8+PGNpcmNsZSBjeD0iMTIiIGN5PSI5IiByPSIyIi8+PHBhdGggZD0iTTE2LjIgNC44YzIgMiAyLjI2IDUuMTEuOCA3LjQ3Ii8+PHBhdGggZD0iTTE5LjEgMS45YTkuOTYgOS45NiAwIDAgMSAwIDE0LjEiLz48cGF0aCBkPSJNOS41IDE4aDUiLz48cGF0aCBkPSJtOCAyMiA0LTExIDQgMTEiLz48L3N2Zz4="
+                        /></strong>
+                    </p>
+                    <iframe
+                        src="https://radio.crapcraft.nz/public/crapcraft.nz/embed?theme=dark&bg_color=262626&rounded=1&hide_volume=1&hide_streams=1"
+                        frameborder="0"
+                        allowtransparency="true"
+                        style="width: 100%; min-height: 150px; height: 150px; border: 0"
+                    ></iframe>
+                </div>
+            </nav>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <p>
+                    <small
+                        >By using any crapcraft.nz service you agree to our
+                        <a href="https://crapcraft.nz/privacy">Privacy Policy & Terms of Service</a>.</small
+                    >
+                </p>
             </div>
-            <a href="https://ai.crapcraft.nz">
-                <img src="https://cdn.crapcraft.nz/u/open-webui.png" style="width:42px;height:42px;">
-            </a>
-            <a href="https://searxng.crapcraft.nz">
-                <img src="https://cdn.crapcraft.nz/u/searxng.png" style="width:42px;height:42px;">
-            </a>
-            <a href="https://fmd.crapcraft.nz">
-                <img src="https://cdn.crapcraft.nz/u/fmd.png" style="width:42px;height:42px;">
-            </a>
-            <a href="https://uptime.crapcraft.nz">
-                <img src="https://cdn.crapcraft.nz/u/uptime-kuma.png" style="width:42px;height:42px;">
-            </a>
-        </div>
-        <div class="nav-frame">
-            <p><strong>Crapcraft FM</strong></p>
-            <iframe src="https://radio.crapcraft.nz/public/homepage/embed?theme=dark&bg_color=262626&rounded=1&hide_volume=1&hide_streams=1" frameborder="0" allowtransparency="true" style="width: 100%; min-height: 150px; height: 150px; border: 0;"></iframe>
-        </div>
-    </nav>
-</main>
-<footer>
-    <p><small>By using any crapcraft.nz service you agree to our Privacy Policy & Terms of Service.</small></p>
-    <p><a href="https://crapcraft.nz/privacy">Privacy Policy/TOS</a></p>
-</footer>
-    <script>
-        fetch('./stats.json')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById("movie-count").textContent = data.MovieCount
-                document.getElementById("series-count").textContent = data.EpisodeCount
-                document.getElementById("song-count").textContent = data.SongCount
-                document.getElementById("requests-total").textContent = data.RequestsTotal
-                document.getElementById("requests-pending").textContent = data.RequestsPending
-                document.getElementById("requests-approved").textContent = data.RequestsApproved
-            });
-    </script>
-</body>
+            <div class="footer-version">
+                <p>v2.0.1</p>
+            </div>
+        </footer>
+        <script>
+            fetch("./stats.json")
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("movie-count").textContent = data.MovieCount;
+                    document.getElementById("series-count").textContent = data.EpisodeCount;
+                    document.getElementById("song-count").textContent = data.SongCount;
+                    document.getElementById("requests-total").textContent = data.RequestsTotal;
+                    document.getElementById("requests-pending").textContent = data.RequestsPending;
+                    document.getElementById("requests-approved").textContent = data.RequestsApproved;
+                });
+        </script>
+    </body>
 </html>
