@@ -17,7 +17,7 @@
     </a>
     <div class="header-front-text">
         <h1>Crapcraft.nz</h1>
-        <p>A simple homelab with useful services (website is work in progress)</p>
+        <p>A simple homelab with useful services</p>
     </div>
 </header>
 <ul class="topnav">
@@ -27,19 +27,27 @@
 </ul>
 <main>
     <article>
-        <h1>Jellyfin Stats</h1>
-        <p>Movies: <span id="movie-count">...</span></p>
-        <p>Episodes: <span id="series-count">...</span></p>
-        <p>Songs: <span id="song-count">...</span></p>
+        <p>hello random reader welcome to my corner of the internet</p>
     </article>
     <nav>
         <h2>Links</h2>
-            <a href="https://jellyfin.crapcraft.nz">
-                <img src="https://cdn.crapcraft.nz/u/jellyfin.png" style="width:42px;height:42px;">
-            </a>
-            <a href="https://seerr.crapcraft.nz">
-                <img src="https://cdn.crapcraft.nz/u/seerr.png" style="width:42px;height:42px;">
-            </a>
+        <div class="nav-links">
+            <div class="nav-jf">
+                <a href="https://jellyfin.crapcraft.nz">
+                    <img src="https://cdn.crapcraft.nz/u/jellyfin.png" style="width:42px;height:42px;">
+                </a>
+                <p>Songs: <span id="song-count">...</span></p>
+                <p>Episodes: <span id="series-count">...</span></p>
+                <p>Movies: <span id="movie-count">...</span></p>
+            </div>
+            <div class="nav-seerr">
+                <a href="https://seerr.crapcraft.nz">
+                    <img src="https://cdn.crapcraft.nz/u/seerr.png" style="width:42px;height:42px;">
+                </a>
+                <p>Requests: <span id="requests-total">...</span></p>
+                <p>Pending: <span id="requests-pending">...</span></p>
+                <p>Approved: <span id="requests-approved">...</span></p>
+            </div>
             <a href="https://ai.crapcraft.nz">
                 <img src="https://cdn.crapcraft.nz/u/open-webui.png" style="width:42px;height:42px;">
             </a>
@@ -52,6 +60,11 @@
             <a href="https://uptime.crapcraft.nz">
                 <img src="https://cdn.crapcraft.nz/u/uptime-kuma.png" style="width:42px;height:42px;">
             </a>
+        </div>
+        <div class="nav-frame">
+            <p><strong>Crapcraft FM</strong></p>
+            <iframe src="https://radio.crapcraft.nz/public/homepage/embed?theme=dark&bg_color=262626&rounded=1&hide_volume=1&hide_streams=1" frameborder="0" allowtransparency="true" style="width: 100%; min-height: 150px; height: 150px; border: 0;"></iframe>
+        </div>
     </nav>
 </main>
 <footer>
@@ -65,6 +78,9 @@
                 document.getElementById("movie-count").textContent = data.MovieCount
                 document.getElementById("series-count").textContent = data.EpisodeCount
                 document.getElementById("song-count").textContent = data.SongCount
+                document.getElementById("requests-total").textContent = data.RequestsTotal
+                document.getElementById("requests-pending").textContent = data.RequestsPending
+                document.getElementById("requests-approved").textContent = data.RequestsApproved
             });
     </script>
 </body>
