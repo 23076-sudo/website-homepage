@@ -28,11 +28,9 @@
         <main>
             <article>
                 <!--<p>hello random reader welcome to my corner of the internet</p>-->
-            </article>
-            <nav>
                 <h2>Links</h2>
-                <div class="nav-links">
-                    <div class="nav-box">
+                <div class="article-links">
+                    <div class="article-box">
                         <a href="https://jellyfin.crapcraft.nz">
                             <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/jellyfin.svg" style="width: 42px; height: 42px; align-items: center;" />
                         </a>
@@ -41,7 +39,7 @@
                         <p>Episodes: <span id="series-count">...</span></p>
                         <p>Movies: <span id="movie-count">...</span></p>
                     </div>
-                    <div class="nav-box">
+                    <div class="article-box">
                         <a href="https://seerr.crapcraft.nz">
                             <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/seerr.svg" style="width: 42px; height: 42px" />
                         </a>
@@ -50,7 +48,7 @@
                         <p>Pending: <span id="requests-pending">...</span></p>
                         <p>Approved: <span id="requests-approved">...</span></p>
                     </div>
-                    <div class="nav-box">
+                    <div class="article-box">
                         <a href="https://uptime.crapcraft.nz">
                             <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/uptime-kuma.svg" style="width: 42px; height: 42px" />
                         </a>
@@ -59,46 +57,66 @@
                         <p>Seerr: <img src="https://uptime.crapcraft.nz/api/badge/5/status" style="vertical-align: middle;"></p>
                         <p>Authentik: <img src="https://uptime.crapcraft.nz/api/badge/20/status" style="vertical-align: middle;"></p>
                     </div>
-                    <div class="nav-box">
+                    <div class="article-box">
                         <a href="https://ai.crapcraft.nz">
                             <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/open-webui.svg" style="width: 42px; height: 42px" />
                         </a>
                         <h3><a href="https://ai.crapcraft.nz">Open WebUI</a></h3>
                         <p>Version <span id="openwebui-version">...</span></p>
                     </div>
-                    <div class="nav-box">
+                    <div class="article-box">
+                        <a href="https://searxng.crapcraft.nz">
+                            <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/searxng.svg" style="width: 42px; height: 42px" />
+                        </a>
+                        <h3><a href="https://searxng.crapcraft.nz">SearXNG</a></h3>
+                    </div>
+                    <div class="article-box">
+                        <a href="https://fmd.crapcraft.nz">
+                            <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/fmd.svg" style="width: 42px; height: 42px" />
+                        </a>
+                        <h3><a href="https://fmd.crapcraft.nz">Find My Device</a></h3>
+                    </div>
+                </div>
+                <h2>Arr Stack</h2>
+                <div class="article-links">
+                    <div class="article-box">
                         <a href="https://prowlarr.crapcraft.nz">
                             <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/prowlarr.svg" style="width: 42px; height: 42px; align-items: center;" />
                         </a>
                         <h3><a href="https://Prowlarr.crapcraft.nz">Prowlarr</a></h3>
                         <p>Version <span id="prowlarr-version">...</span></p>
                     </div>
-                    <div class="nav-box">
+                    <div class="article-box">
                         <a href="https://radarr.crapcraft.nz">
                             <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/radarr.svg" style="width: 42px; height: 42px; align-items: center;" />
                         </a>
                         <h3><a href="https://radarr.crapcraft.nz">Radarr</a></h3>
                         <p>Version <span id="radarr-version">...</span></p>
                     </div>
-                    <div class="nav-box">
-                        <a href="https://searxng.crapcraft.nz">
-                            <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/searxng.svg" style="width: 42px; height: 42px" />
+                    <div class="article-box">
+                        <a href="https://sonarr.crapcraft.nz">
+                            <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/sonarr.svg" style="width: 42px; height: 42px; align-items: center;" />
                         </a>
-                        <h3><a href="https://searxng.crapcraft.nz">SearXNG</a></h3>
+                        <h3><a href="https://sonarr.crapcraft.nz">Sonarr</a></h3>
+                        <p>Version <span id="sonarr-version">...</span></p>
                     </div>
-                    <div class="nav-box">
-                        <a href="https://fmd.crapcraft.nz">
-                            <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/fmd.svg" style="width: 42px; height: 42px" />
+                    <div class="article-box">
+                        <a href="https://lidarr.crapcraft.nz">
+                            <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/lidarr.svg" style="width: 42px; height: 42px; align-items: center;" />
                         </a>
-                        <h3><a href="https://fmd.crapcraft.nz">Find My Device</a></h3>
+                        <h3><a href="https://lidarr.crapcraft.nz">Lidarr</a></h3>
+                        <p>Version <span id="lidarr-version">...</span></p>
                     </div>
-                    <div class="nav-frame">
-                    <p><strong>Crapcraft Minecraft FM
-                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXJhZGlvLXRvd2VyLWljb24gbHVjaWRlLXJhZGlvLXRvd2VyIj48cGF0aCBkPSJNNC45IDE2LjFDMSAxMi4yIDEgNS44IDQuOSAxLjkiLz48cGF0aCBkPSJNNy44IDQuN2E2LjE0IDYuMTQgMCAwIDAtLjggNy41Ii8+PGNpcmNsZSBjeD0iMTIiIGN5PSI5IiByPSIyIi8+PHBhdGggZD0iTTE2LjIgNC44YzIgMiAyLjI2IDUuMTEuOCA3LjQ3Ii8+PHBhdGggZD0iTTE5LjEgMS45YTkuOTYgOS45NiAwIDAgMSAwIDE0LjEiLz48cGF0aCBkPSJNOS41IDE4aDUiLz48cGF0aCBkPSJtOCAyMiA0LTExIDQgMTEiLz48L3N2Zz4="/></strong></p>
-                        <iframe src="https://radio.crapcraft.nz/public/homepage/embed?theme=dark&bg_color=262626&rounded=1&hide_volume=1&hide_streams=1" frameborder="0" allowtransparency="true" style="width: 100%; min-height: 150px; height: 150px; border: 0"></iframe>
-                        <p><strong>Crapcraft FM<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXJhZGlvLXRvd2VyLWljb24gbHVjaWRlLXJhZGlvLXRvd2VyIj48cGF0aCBkPSJNNC45IDE2LjFDMSAxMi4yIDEgNS44IDQuOSAxLjkiLz48cGF0aCBkPSJNNy44IDQuN2E2LjE0IDYuMTQgMCAwIDAtLjggNy41Ii8+PGNpcmNsZSBjeD0iMTIiIGN5PSI5IiByPSIyIi8+PHBhdGggZD0iTTE2LjIgNC44YzIgMiAyLjI2IDUuMTEuOCA3LjQ3Ii8+PHBhdGggZD0iTTE5LjEgMS45YTkuOTYgOS45NiAwIDAgMSAwIDE0LjEiLz48cGF0aCBkPSJNOS41IDE4aDUiLz48cGF0aCBkPSJtOCAyMiA0LTExIDQgMTEiLz48L3N2Zz4="/></strong></p>
-                        <iframe src="https://radio.crapcraft.nz/public/crapcraft.nz/embed?theme=dark&bg_color=262626&rounded=1&hide_volume=1&hide_streams=1" frameborder="0" allowtransparency="true" style="width: 100%; min-height: 150px; height: 150px; border: 0"></iframe>
                 </div>
+            </article>
+            <nav>
+                <div class="nav-frame">
+                    <p><strong>Crapcraft Minecraft FM
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXJhZGlvLXRvd2VyLWljb24gbHVjaWRlLXJhZGlvLXRvd2VyIj48cGF0aCBkPSJNNC45IDE2LjFDMSAxMi4yIDEgNS44IDQuOSAxLjkiLz48cGF0aCBkPSJNNy44IDQuN2E2LjE0IDYuMTQgMCAwIDAtLjggNy41Ii8+PGNpcmNsZSBjeD0iMTIiIGN5PSI5IiByPSIyIi8+PHBhdGggZD0iTTE2LjIgNC44YzIgMiAyLjI2IDUuMTEuOCA3LjQ3Ii8+PHBhdGggZD0iTTE5LjEgMS45YTkuOTYgOS45NiAwIDAgMSAwIDE0LjEiLz48cGF0aCBkPSJNOS41IDE4aDUiLz48cGF0aCBkPSJtOCAyMiA0LTExIDQgMTEiLz48L3N2Zz4="/></strong></p>
+                    <iframe src="https://radio.crapcraft.nz/public/homepage/embed?theme=dark&bg_color=262626&rounded=1&hide_volume=1&hide_streams=1" frameborder="0" allowtransparency="true" style="width: 100%; min-height: 150px; height: 150px; border: 0"></iframe>
+                    <p><strong>Crapcraft FM
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXJhZGlvLXRvd2VyLWljb24gbHVjaWRlLXJhZGlvLXRvd2VyIj48cGF0aCBkPSJNNC45IDE2LjFDMSAxMi4yIDEgNS44IDQuOSAxLjkiLz48cGF0aCBkPSJNNy44IDQuN2E2LjE0IDYuMTQgMCAwIDAtLjggNy41Ii8+PGNpcmNsZSBjeD0iMTIiIGN5PSI5IiByPSIyIi8+PHBhdGggZD0iTTE2LjIgNC44YzIgMiAyLjI2IDUuMTEuOCA3LjQ3Ii8+PHBhdGggZD0iTTE5LjEgMS45YTkuOTYgOS45NiAwIDAgMSAwIDE0LjEiLz48cGF0aCBkPSJNOS41IDE4aDUiLz48cGF0aCBkPSJtOCAyMiA0LTExIDQgMTEiLz48L3N2Zz4="/></strong></p>
+                    <iframe src="https://radio.crapcraft.nz/public/crapcraft.nz/embed?theme=dark&bg_color=262626&rounded=1&hide_volume=1&hide_streams=1" frameborder="0" allowtransparency="true" style="width: 100%; min-height: 150px; height: 150px; border: 0"></iframe>
                 </div>
             </nav>
         </main>
@@ -112,7 +130,7 @@
                 </p>
             </div>
             <div class="footer-version">
-                <p>v2.1.2</p>
+                <p>v<span id="version">...</span></p>
             </div>
         </footer>
         <script>
@@ -127,7 +145,16 @@
                     document.getElementById("requests-approved").textContent = data.RequestsApproved;
                     document.getElementById("prowlarr-version").textContent = data.ProwlarrVersion;
                     document.getElementById("radarr-version").textContent = data.RadarrVersion;
+                    document.getElementById("sonarr-version").textContent = data.SonarrVersion;
+                    document.getElementById("lidarr-version").textContent = data.LidarrVersion;
                     document.getElementById("openwebui-version").textContent = data.OpenwebuiVersion;
+                });
+        </script>
+        <script>
+            fetch("./version.json")
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("version").textContent = data.Version;
                 });
         </script>
     </body>

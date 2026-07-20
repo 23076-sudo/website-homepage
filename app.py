@@ -32,6 +32,20 @@ RADARR_HEADERS = {
     "X-API-Key": RADARR_KEY
 }
 
+#sonarr api urls/keys
+SONARR_URL = os.getenv("SONARR_URL")
+SONARR_KEY = os.getenv("SONARR_KEY")
+SONARR_HEADERS = {
+    "X-API-Key": SONARR_KEY
+}
+
+#lidarr api urls/keys
+LIDARR_URL = os.getenv("LIDARR_URL")
+LIDARR_KEY = os.getenv("LIDARR_KEY")
+LIDARR_HEADERS = {
+    "X-API-Key": LIDARR_KEY
+}
+
 #openwebui api url
 OPENWEBUI_URL = os.getenv("OPENWEBUI_URL")
 
@@ -68,6 +82,20 @@ def radarr():
         "RadarrVersion": data["version"],
     }
 
+def sonarr():
+    response = requests.get(f"{SONARR_URL}/api/v3/system/status", headers=SONARR_HEADERS)
+    data = response.json()
+    return {
+        "SonarrVersion": data["version"],
+    }
+
+def lidarr():
+    response = requests.get(f"{LIDARR_URL}/api/v1/system/status", headers=LIDARR_HEADERS)
+    data = response.json()
+    return {
+        "LidarrVersion": data["version"],
+    }
+
 def openwebui():
     response = requests.get(f"{OPENWEBUI_URL}/api/version")
     data = response.json()
@@ -81,6 +109,8 @@ def results():
     stats.update(seerr())
     stats.update(prowlarr())
     stats.update(radarr())
+    stats.update(sonarr())
+    stats.update(lidarr())
     stats.update(openwebui())
 
     with open("./website/stats.json", "w") as f:
@@ -90,5 +120,7 @@ jellyfin()
 seerr()
 prowlarr()
 radarr()
+sonarr()
+lidarr()
 openwebui()
 results()

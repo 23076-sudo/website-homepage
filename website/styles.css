@@ -59,7 +59,6 @@ nav {
 }
 
 .nav-frame {
-  margin-top: auto;
   width: 100%;
 }
 
@@ -90,9 +89,40 @@ article {
   background-color: #f1f1f1;
 }
 
-article p {
-  font-size: 60px;
+.article-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+  border-radius: 12px;
+  padding: 5px;
+  background-color:  #666;
+  color: white;
 }
+
+.article-box {
+  padding: 5px;
+}
+
+.article-box h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-box a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
 
 section::after {
   content: "";
