@@ -18,12 +18,23 @@ SEERR_HEADERS = {
     "X-API-Key": SEERR_KEY
 }
 
-#seerr api urls/keys
+#prowlarr api urls/keys
 PROWLARR_URL = os.getenv("PROWLARR_URL")
 PROWLARR_KEY = os.getenv("PROWLARR_KEY")
 PROWLARR_HEADERS = {
     "X-API-Key": PROWLARR_KEY
 }
+
+#radarr api urls/keys
+RADARR_URL = os.getenv("RADARR_URL")
+RADARR_KEY = os.getenv("RADARR_KEY")
+RADARR_HEADERS = {
+    "X-API-Key": RADARR_KEY
+}
+
+#openwebui api url
+OPENWEBUI_URL = os.getenv("OPENWEBUI_URL")
+
 
 def jellyfin():
     response = requests.get(f"{JF_URL}/Items/Counts", headers=JF_HEADERS)
@@ -50,16 +61,34 @@ def prowlarr():
         "ProwlarrVersion": data["version"],
     }
 
+def radarr():
+    response = requests.get(f"{RADARR_URL}/api/v3/system/status", headers=RADARR_HEADERS)
+    data = response.json()
+    return {
+        "RadarrVersion": data["version"],
+    }
+
+def openwebui():
+    response = requests.get(f"{OPENWEBUI_URL}/api/version")
+    data = response.json()
+    return {
+        "OpenwebuiVersion": data["version"],
+    }
+
 def results():
     stats = {}
     stats.update(jellyfin())
     stats.update(seerr())
     stats.update(prowlarr())
+    stats.update(radarr())
+    stats.update(openwebui())
 
-    with open("./homepage/stats.json", "w") as f:
+    with open("./website/stats.json", "w") as f:
         json.dump(stats, f)
         print(stats)
 jellyfin()
 seerr()
 prowlarr()
+radarr()
+openwebui()
 results()
