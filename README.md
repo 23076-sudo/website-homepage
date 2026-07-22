@@ -1,4 +1,4 @@
-# **a simple webpage with jellyfin stats**
+# **a simple webpage with selfhosted apps stats**
 
 example: [crapcraft.nz](https://crapcraft.nz)
 
