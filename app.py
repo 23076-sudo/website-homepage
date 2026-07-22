@@ -144,6 +144,7 @@ def results():
     with open("./website/stats.json", "w") as f:
         json.dump(stats, f)
         print(stats)
+    
 jellyfin()
 seerr()
 prowlarr()
