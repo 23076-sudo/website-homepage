@@ -12,9 +12,7 @@
     </head>
     <body>
         <header>
-            <a href="https://crapcraft.nz">
-                <img src="logo.png" alt="logo" />
-            </a>
+            <img src="logo.png" alt="logo" />
             <div class="header-front-text">
                 <h1>Crapcraft.nz</h1>
                 <p>A simple homelab with useful services</p>
@@ -43,10 +41,18 @@
                         <a href="https://seerr.crapcraft.nz">
                             <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/seerr.svg" style="width: 42px; height: 42px" />
                         </a>
-                        <h3><a href="https://Seerr.crapcraft.nz">Seerr</a></h3>
+                        <h3><a href="https://seerr.crapcraft.nz">Seerr</a></h3>
                         <p>Requests: <span id="requests-total">...</span></p>
                         <p>Pending: <span id="requests-pending">...</span></p>
                         <p>Approved: <span id="requests-approved">...</span></p>
+                    </div>
+                    <div class="article-box">
+                        <a href="https://photos.crapcraft.nz">
+                            <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/immich.svg" style="width: 42px; height: 42px" />
+                        </a>
+                        <h3><a href="https://photos.crapcraft.nz">Immich</a></h3>
+                        <p>Photos: <span id="immich-photos">...</span></p>
+                        <p>Videos: <span id="immich-videos">...</span></p>
                     </div>
                     <div class="article-box">
                         <a href="https://ai.crapcraft.nz">
@@ -54,6 +60,13 @@
                         </a>
                         <h3><a href="https://ai.crapcraft.nz">Open WebUI</a></h3>
                         <p>Version <span id="openwebui-version">...</span></p>
+                    </div>
+                    <div class="article-box">
+                        <a href="https://map.crapcraft.nz">
+                            <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/minecraft.svg" style="width: 42px; height: 42px" />
+                        </a>
+                        <h3><a href="https://map.crapcraft.nz">Minecraft</a></h3>
+                        <p>DM for access</p>
                     </div>
                     <div class="article-box">
                         <a href="https://searxng.crapcraft.nz">
@@ -71,46 +84,55 @@
                 <h2>Arr Stack/Infrastructure</h2>
                 <div class="article-links">
                     <div class="article-box">
+                        <a href="https://tracearr.crapcraft.nz">
+                            <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/tracearr.svg" style="width: 42px; height: 42px; align-items: center;" />
+                        </a>
+                        <h3><a href="https://tracearr.crapcraft.nz">Tracearr</a></h3>
+                        <p>Active Streams: <span id="tracearr-streams">...</span></p>
+                        <p>Total Sessions: <span id="tracearr-sessions">...</span></p>
+                        <p>Total Users: <span id="tracearr-users">...</span></p>
+                    </div>
+                    <div class="article-box">
                         <a href="https://prowlarr.crapcraft.nz">
                             <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/prowlarr.svg" style="width: 42px; height: 42px; align-items: center;" />
                         </a>
                         <h3><a href="https://Prowlarr.crapcraft.nz">Prowlarr</a></h3>
-                        <p>Version <span id="prowlarr-version">...</span></p>
+                        <p>Version: <span id="prowlarr-version">...</span></p>
                     </div>
                     <div class="article-box">
                         <a href="https://radarr.crapcraft.nz">
                             <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/radarr.svg" style="width: 42px; height: 42px; align-items: center;" />
                         </a>
                         <h3><a href="https://radarr.crapcraft.nz">Radarr</a></h3>
-                        <p>Version <span id="radarr-version">...</span></p>
+                        <p>Version: <span id="radarr-version">...</span></p>
                     </div>
                     <div class="article-box">
                         <a href="https://sonarr.crapcraft.nz">
                             <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/sonarr.svg" style="width: 42px; height: 42px; align-items: center;" />
                         </a>
                         <h3><a href="https://sonarr.crapcraft.nz">Sonarr</a></h3>
-                        <p>Version <span id="sonarr-version">...</span></p>
+                        <p>Version: <span id="sonarr-version">...</span></p>
                     </div>
                     <div class="article-box">
                         <a href="https://lidarr.crapcraft.nz">
                             <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/lidarr.svg" style="width: 42px; height: 42px; align-items: center;" />
                         </a>
                         <h3><a href="https://lidarr.crapcraft.nz">Lidarr</a></h3>
-                        <p>Version <span id="lidarr-version">...</span></p>
+                        <p>Version: <span id="lidarr-version">...</span></p>
                     </div>
                     <div class="article-box">
                         <a href="https://bazarr.crapcraft.nz">
                             <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/bazarr.svg" style="width: 42px; height: 42px; align-items: center;" />
                         </a>
                         <h3><a href="https://bazarr.crapcraft.nz">Bazarr</a></h3>
-                        <p>Version <span id="bazarr-version">...</span></p>
+                        <p>Version: <span id="bazarr-version">...</span></p>
                     </div>
                     <div class="article-box">
                         <a href="https://qb.crapcraft.nz">
                             <img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/qbittorrent.svg" style="width: 42px; height: 42px; align-items: center;" />
                         </a>
                         <h3><a href="https://qb.crapcraft.nz">Bazarr</a></h3>
-                        <p>Version <span id="qbittorrent-version">...</span></p>
+                        <p>Version: <span id="qbittorrent-version">...</span></p>
                     </div>
                 </div>
             </article>
@@ -138,14 +160,14 @@
             </nav>
         </main>
         <footer>
-            <a href="https://github.com/Crapcraft">
-                <img src="github.svg" alt="Github logo" style="width: 20px; height: 20px;"/>
+            <a href="https://github.com/Crapcraft/Crapcraft.nz">
+                <img src="https://img.shields.io/badge/Source_Code-gray?logo=github" alt="Github logo"/>
             </a>
             <div class="footer-content">
                 <p>
                     <small
                         >By using any crapcraft.nz service you agree to our
-                        <a href="https://crapcraft.nz/privacy">Privacy Policy & Terms of Service</a>.</small
+                        <a href="/privacy">Privacy Policy & Terms of Service</a>.</small
                     >
                 </p>
             </div>
@@ -170,6 +192,11 @@
                     document.getElementById("bazarr-version").textContent = data.BazarrVersion;
                     document.getElementById("openwebui-version").textContent = data.OpenwebuiVersion;
                     document.getElementById("qbittorrent-version").textContent = data.QbittorrentVersion;
+                    document.getElementById("tracearr-sessions").textContent = data.TotalSessions;
+                    document.getElementById("tracearr-streams").textContent = data.ActiveStreams;
+                    document.getElementById("tracearr-users").textContent = data.TotalUsers;
+                    document.getElementById("immich-photos").textContent = data.Photos;
+                    document.getElementById("immich-videos").textContent = data.Videos;
                 });
         </script>
         <script> <!-- this script is simply to make updating the version number more easy by editing one file instead of all the files manually -->
