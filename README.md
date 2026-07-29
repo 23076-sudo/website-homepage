@@ -12,7 +12,20 @@ example: [crapcraft.nz](https://crapcraft.nz)
 
 ## folder structure
 
-app.py and .env in the root folder while the .json (created automaticly by app.py), html and css are in /homepage for safe serving without exposing api keys
+website-homepage/
+└── website-homepage/
+    ├── website/
+    │   ├── images/
+    │   ├── javascript/
+    │   ├── index.html
+    │   ├── stats.json
+    │   ├── styles.css
+    │   └── version.json
+    ├── .gitignore
+    ├── app.py
+    ├── example.env
+    └── README.md
+
 
 ## setup
 
@@ -24,8 +37,10 @@ app.py and .env in the root folder while the .json (created automaticly by app.p
 6. edit the .env using your prefered text editor
 7. run app.py to generate the .json
 8. serve the homepage folder with a web server software of your chosing
-9. **optional but important to keep stats up to date** by using a cron job
-   `*/5 * * * * cd /path/to/website-homepage && /usr/bin/python3 app.py`
+## optional
+1. `*/5 * * * * cd /path/to/website-homepage && /usr/bin/python3 app.py`
+2. for the radio iframes setup [azuracast](https://www.azuracast.com/)
+3. for the uptime kuma iframe setup [homarr-iframes](github.com/diogovalentte/homarr-iframes)
 
 ## customizing
 
