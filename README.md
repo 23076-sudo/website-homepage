@@ -10,23 +10,6 @@ example: [crapcraft.nz](https://crapcraft.nz)
 - web server software to serve the files
 - internet (optional)
 
-## folder structure
-
-website-homepage/
-└── website-homepage/
-    ├── website/
-    │   ├── images/
-    │   ├── javascript/
-    │   ├── index.html
-    │   ├── stats.json
-    │   ├── styles.css
-    │   └── version.json
-    ├── .gitignore
-    ├── app.py
-    ├── example.env
-    └── README.md
-
-
 ## setup
 
 1. `git clone https://github.com/23076-sudo/website-homepage`
@@ -39,8 +22,7 @@ website-homepage/
 8. serve the homepage folder with a web server software of your chosing
 ## optional
 1. `*/5 * * * * cd /path/to/website-homepage && /usr/bin/python3 app.py`
-2. for the radio iframes setup [azuracast](https://www.azuracast.com/)
-3. for the uptime kuma iframe setup [homarr-iframes](github.com/diogovalentte/homarr-iframes)
+2. for the uptime kuma iframe setup [homarr-iframes](github.com/diogovalentte/homarr-iframes)
 
 ## customizing
 
